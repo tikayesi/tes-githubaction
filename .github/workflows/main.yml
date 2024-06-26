@@ -33,4 +33,5 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             rm -rf /var/www/html/*
-            git clone https://github.com/alvinsenjaya/HeroBiz /var/www/html
+            rm -rf /var/www/html/.git
+            git clone https://github.com/alvinsenjaya/HeroBiz /var/www/html/
