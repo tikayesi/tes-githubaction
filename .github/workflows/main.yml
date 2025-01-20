@@ -23,15 +23,3 @@ jobs:
     steps:
       - name: menampilkan teks
         run: echo "ini step deployment"
-      - name: executing remote ssh commands using ssh key
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-            rm -rf /var/www/html/*
-            rm -rf /var/www/html/.git
-            rm -rf /var/www/html/.github
-            git clone https://github.com/alvinsenjaya/HeroBiz /var/www/html/
